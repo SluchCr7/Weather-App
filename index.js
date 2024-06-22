@@ -34,3 +34,13 @@ searchBtn.addEventListener("click", () => {
             
         })
 })
+
+function chBg() {
+    if (new Date().getHours() > 18 || new Date().getHours() < 6) {
+        program.style.backgroundImage = "url('./Night/photo-1542601098-8fc114e148e2.avif')"
+    }
+    else {  
+        program.style.backgroundImage = "url('./day/photo-1536244636800-a3f74db0f3cf.avif')"
+    }
+}
+chBg()
