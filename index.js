@@ -3,8 +3,8 @@ let searchBtn = document.getElementById("searchBtn")
 let temp = document.querySelector(".temp")
 let city = document.querySelector(".city")
 let date = document.querySelector(".date")
-let program = document.querySelector(".program")
-let icon = document.querySelector(".icon")
+let program = document.getElementById("program")
+let icon = document.getElementById("icon")
 let searchtxt = searchInput.value
 let wind = document.querySelector("#wind")
 let humidity = document.querySelector("#humidity")
@@ -31,16 +31,17 @@ searchBtn.addEventListener("click", () => {
         .catch(error => console.log(error))
         .finally(() => {
             searchInput.value = ""
-            
         })
 })
 
 function chBg() {
-    if (new Date().getHours() > 18 || new Date().getHours() < 6) {
-        program.style.backgroundImage = "url('./Night/photo-1542601098-8fc114e148e2.avif')"
+    if (icon.src == "https://cdn.weatherapi.com/weather/64x64/night/113.png") {
+        program.style.backgroundImage = "url('/Night/photo-1548232979-6c557ee14752.avif')"
     }
-    else {  
-        program.style.backgroundImage = "url('./day/photo-1536244636800-a3f74db0f3cf.avif')"
+    else if(icon.src == "https://cdn.weatherapi.com/weather/64x64/night/113.png"){  
+        program.style.backgroundImage = "url('/day/photo-1536244636800-a3f74db0f3cf.avif')"
     }
 }
 chBg()
+
+

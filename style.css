@@ -19,7 +19,7 @@ html{
 }
 
 .program{
-    background: url(/day/photo-1536244636800-a3f74db0f3cf.avif);
+    background-image: url(/day/photo-1536244636800-a3f74db0f3cf.avif);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -35,6 +35,9 @@ html{
         width: 100%;
         height: 100%;
         padding: 2rem;
+        position: relative;
+        top: 10%;
+        height: 100%;
         .result{
             display: flex;
             flex-direction: row;
@@ -89,8 +92,8 @@ html{
                     color: #fff;
                 }
                 .value{
-                    font-size: 1.5rem;
-                    font-weight: 700;
+                    font-size: 1.8rem;
+                    font-weight: 800;
                     color: #fff;
                 }
             }
